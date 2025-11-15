@@ -1,604 +1,509 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E2E Management Services</title>
-    <link rel="icon" type="image/png" href="images/logo.png">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Akshara Consultancy — Talent | Banking | Real Estate | Insurance</title>
+    <meta name="description"
+        content="Akshara Consultancy — specialist hiring for banking, automobile, insurance, and real estate sectors. Premium corporate talent solutions." />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
     <link rel="stylesheet" href="index.css">
-    <script src="index.js"></script>
+    <!-- <style>
+    /* -------------------------
+       Reset & base
+       -------------------------*/
+    :root{
+      --bg:#0f1724; /* deep navy */
+      --card:#0b1220;
+      --accent:#00d4ff;
+      --accent-2:#7c4dff;
+      --muted:#9aa6b2;
+      --glass: rgba(255,255,255,0.04);
+      --glass-2: rgba(255,255,255,0.02);
+      --max-width:1200px;
+      --radius:12px;
+      --ff-sans: 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:var(--ff-sans);
+      background: radial-gradient(1200px 800px at 10% 10%, rgba(124,77,255,0.08), transparent),
+                  radial-gradient(900px 600px at 90% 80%, rgba(0,212,255,0.04), transparent),
+                  var(--bg);
+      color:#e6eef6;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+      padding-bottom:80px;
+    }
+
+    /* container */
+    .wrap{max-width:var(--max-width);margin:0 auto;padding:28px;} 
+
+    /* -------------------------
+       Header / Navbar
+       -------------------------*/
+    header{
+      position:fixed;left:0;right:0;top:16px;z-index:60;backdrop-filter: blur(6px);
+      padding:8px 18px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:18px;margin:0 18px;
+      box-shadow:0 6px 20px rgba(2,6,23,0.6);
+    }
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:12px;max-width:var(--max-width);margin:0 auto}
+
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{
+      width:48px;height:48px;border-radius:10px;display:grid;place-items:center;font-weight:700;
+      background:linear-gradient(135deg,var(--accent),var(--accent-2));box-shadow:0 6px 18px rgba(124,77,255,0.12);color:#071023
+    }
+    .brand h1{font-size:16px;margin:0;letter-spacing:0.4px}
+    .brand p{margin:0;font-size:12px;color:var(--muted)}
+
+    nav ul{display:flex;gap:14px;list-style:none;margin:0;padding:0;align-items:center}
+    nav a{color:inherit;text-decoration:none;padding:8px 12px;border-radius:8px;font-size:14px}
+    nav a:hover{background:var(--glass)}
+
+    .cta{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(90deg,var(--accent),var(--accent-2));padding:10px 14px;border-radius:10px;color:#051325;font-weight:600;text-decoration:none}
+    .cta:active{transform:translateY(1px)}
+
+    /* hamburger for mobile */
+    .hamburger{display:none;cursor:pointer;width:44px;height:44px;border-radius:10px;background:transparent;align-items:center;justify-content:center}
+    .hamburger .bar{width:20px;height:2px;background:#cfefff;border-radius:2px;position:relative}
+    .hamburger .bar::after,.hamburger .bar::before{content:'';position:absolute;left:0;width:20px;height:2px;background:#cfefff;border-radius:2px}
+    .hamburger .bar::before{top:-6px}
+    .hamburger .bar::after{top:6px}
+
+    /* -------------------------
+       Hero
+       -------------------------*/
+    .hero{display:grid;grid-template-columns:1fr 460px;gap:28px;align-items:center;padding:120px 0 60px}
+    .hero-left{padding-right:12px}
+    .eyebrow{display:inline-flex;align-items:center;gap:10px;padding:6px 10px;background:linear-gradient(90deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));border-radius:999px;font-size:13px;color:var(--muted);width:max-content}
+    .hero h2{font-size:44px;margin:18px 0 12px;line-height:1.02;letter-spacing:-1px}
+    .hero p{color:var(--muted);font-size:16px;margin:0 0 18px}
+
+    .hero .features{display:flex;gap:10px;flex-wrap:wrap}
+    .pill{background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:10px 12px;border-radius:999px;font-size:13px;color:var(--muted);display:inline-flex;align-items:center;gap:8px}
+
+    .actions{display:flex;gap:12px;margin-top:18px}
+    .btn{padding:12px 16px;border-radius:10px;border:0;font-weight:700;cursor:pointer}
+    .btn-primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#051325}
+    .btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+
+    /* hero right: glass card */
+    .hero-right{background:linear-gradient(180deg,var(--glass),var(--glass-2));padding:22px;border-radius:16px;backdrop-filter: blur(8px);box-shadow:0 10px 30px rgba(2,6,23,0.6)}
+    .stats{display:flex;gap:18px;justify-content:space-between}
+    .stat{display:flex;flex-direction:column}
+    .stat .num{font-size:24px;font-weight:800}
+    .stat .label{font-size:12px;color:var(--muted)}
+
+    /* services */
+    .services{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:28px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.02)}
+    .card h4{margin:8px 0 4px}
+    .card p{margin:0;color:var(--muted);font-size:13px}
+
+    /* animated background shapes */
+    .bg-shape{position:fixed;pointer-events:none;z-index:0;opacity:0.12}
+    .bg-blob{width:280px;height:280px;border-radius:22px;filter:blur(40px);transform:translate3d(0,0,0)}
+    .blob-a{background:linear-gradient(45deg,var(--accent),var(--accent-2));top:60px;left:40px}
+    .blob-b{background:linear-gradient(45deg,var(--accent-2),var(--accent));bottom:40px;right:40px}
+
+    /* footer bar (call to action sticky on desktop) */
+    .hirebar{position:fixed;left:18px;right:18px;bottom:18px;background:linear-gradient(90deg, rgba(0,0,0,0.35), rgba(255,255,255,0.02));padding:12px;border-radius:14px;display:flex;align-items:center;justify-content:space-between;gap:12px;backdrop-filter: blur(6px);box-shadow:0 8px 30px rgba(2,6,23,0.6)}
+    .hirebar .left{display:flex;gap:10px;align-items:center}
+
+    /* small screens (mobile only) */
+    @media (max-width:480px){
+      header{top:10px;margin:0 10px;padding:6px}
+      .wrap{padding:10px}
+      .nav{gap:8px}
+      .brand h1{font-size:14px}
+      .brand p{display:none}
+      nav ul{display:none}
+      .hamburger{display:flex}
+      .hero{grid-template-columns:1fr;gap:18px;padding:92px 0 30px}
+      .hero h2{font-size:28px}
+      .hero-right{order:2}
+      .hero-left{order:1;padding-right:0}
+      .hero p{font-size:14px}
+      .services{grid-template-columns:1fr;gap:12px}
+      .stats{flex-direction:row;gap:12px}
+      .hirebar{flex-direction:column;align-items:stretch;padding:10px}
+
+      /* mobile nav menu panel */
+      .mobile-menu{position:fixed;left:10px;right:10px;top:72px;background:linear-gradient(180deg, rgba(7,18,35,0.98), rgba(7,18,35,0.98));border-radius:12px;padding:12px;box-shadow:0 14px 50px rgba(2,6,23,0.6);display:none;z-index:80}
+      .mobile-menu.show{display:block}
+      .mobile-menu a{display:block;padding:12px 10px;border-radius:8px}
+    }
+
+    /* intentionally no 'tablet' breakpoint - tablet will keep desktop layout, per request */
+
+    /* subtle entrance animations */
+    .reveal{opacity:0;transform:translateY(14px);transition:all 700ms cubic-bezier(.2,.9,.2,1)}
+    .reveal.show{opacity:1;transform:none}
+
+    /* micro-interactions */
+    .card:hover{transform:translateY(-6px);transition:transform 260ms}
+
+  </style> -->
 </head>
 
 <body>
 
-    <div class="hire">
-        <h5 onclick="openPopup()">We are hiring</h5>
-    </div>
+    <!-- decorative blobs -->
+    <div class="bg-shape blob-a bg-blob"></div>
+    <div class="bg-shape blob-b bg-blob"></div>
 
-    <div class="popup" id="popup">
-        <span class="close" onclick="closePopup()">&times;</span>
-        <h2>Apply for the Job</h2>
-        <form>
-            <label for="name">Name:</label><br>
-            <input type="text" id="name" name="name"><br><br>
-            <label for="phone">Phone No.:</label><br>
-            <input type="text" id="phone" name="phone"><br><br>
-            <label for="email">Email ID:</label><br>
-            <input type="email" id="email" name="email"><br><br>
-            <label for="message">Message:</label><br>
-            <textarea id="message" name="message"></textarea><br><br>
-            <label for="resume">Attachment (Resume):</label><br>
-            <input type="file" id="resume" name="resume"><br><br>
-            <input type="submit" value="Submit">
-        </form>
-    </div>
+    <header>
+        <div class="nav wrap">
+            <div class="brand">
+                <div class="logo">AK</div>
+                <div>
+                    <h1>Akshara Consultancy</h1>
+                    <p>Hiring • Real Estate • Insurance</p>
+                </div>
+            </div>
 
-    <!-- -----------------------------------------------------------------------Navbar--------------------------------------- -->
-    <div class="container-fluid">
-        <nav class="navbar">
-            <div class="container-navbar">
-                <div class="navbar-brand">
-                    <img src="images/logo.png" alt="Logo">
-                </div>
-                <div class="navbar-toggle" onclick="toggleNavbar()">
-                    <div class="icon"></div>
-                    <div class="icon"></div>
-                    <div class="icon"></div>
-                </div>
-                <ul class="navbar-menu" id="navbarMenu">
-                    <li><a href="#carousel">Home</a></li>
-                    <li><a href="#FirstAbout">About</a></li>
-                    <li><a href="#Services">Services</a></li>
-                    <li><a href="#Contact">Contact</a></li>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#candidates">Candidates</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
-            </div>
-        </nav>
-    </div>
-    <!-- ------------------------------------------------------------------slider------------------------------------------- -->
-    <div class="container" id="carousel">
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#myCarousel" data-slide-to="1"></li>
-                <li data-target="#myCarousel" data-slide-to="2"></li>
-            </ol>
+            </nav>
 
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner">
-
-                <div class="item active">
-                    <img src="images/slider/slider1.png" alt="Los Angeles" style="width:100%;">
-                    <div class="carousel-caption">
-                        <h1>Empowering businesses with <br>digital prowess,</h1><br>
-                        <h3> "Navigating complexities with tailored solutions,<br>
-                            Unlocking innovation to drive success."</h3>
-                    </div>
-                </div>
-
-                <div class="item">
-                    <img src="images/slider/slider2.png" alt="Chicago" style="width:100%;">
-                    <div class="carousel-caption">
-                        <h1>Revolutionizing businesses with <br> tech solutions,</h1><br>
-                        <h3>"Tailored IT expertise for your needs,<br>
-                            Empowering your digital transformation journey."</h3>
-                    </div>
-                </div>
-
-                <div class="item">
-                    <img src="images/slider/slider3.jpg" alt="New York" style="width:100%;">
-                    <div class="carousel-caption">
-                        <h1>Transforming businesses with <br>digital strategies,</h1><br>
-                        <h3>"Expert guidance through technological mazes,<br>
-                            Innovative solutions, your success our mission."</h3>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- Left and right controls -->
-            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right"></span>
-                <span class="sr-only">Next</span>
-            </a>
-        </div>
-    </div>
-
-    <div class="social-icons">
-        <a class="social-icon" href="https://www.facebook.com/">
-            <img src="images/icons/facebook.jpg" alt="Facebook">
-        </a>
-        <a class="social-icon" href="https://www.instagram.com/">
-            <img src="images/icons/insta.png" alt="Instagram">
-        </a>
-        <a class="social-icon" href="https://www.linkedin.com/">
-            <img src="images/icons/linkedin.jpg" alt="LinkedIn">
-        </a>
-    </div>
-
-    <!------------------------------------------------------------------- About ------------------------------------------->
-    <div id="About">
-        <div class="container">
-            <div class="row" id="FirstAbout">
-
-                <div class="Abouttext">
-                    <h1>About</h1>
-                    <h4>AKSHARA CONSULTANCY</h4>
-                </div>
-
-                <div class="col-lg-4">
-                    <div class="image-wrapper">
-                        <div class="image-container">
-                            <img src="images/About/About1.png" alt="Image">
-                            <div class="overlay">
-                                <div class="text">
-                                    <h3 class="title">
-                                        Our History
-                                    </h3>
-                                    <h5 class="description"> At Akshara Consultancy, we are your one-stop solution for IT
-                                        staffing,
-                                        cutting-edge software development, specialized IT training, and government
-                                        software
-                                        development projects. We are committed to driving success through technology and
-                                        talent.
-                                        Whether you're a business looking for top IT professionals, a government agency
-                                        in
-                                        need
-                                        of custom software solutions, or an individual seeking IT training, we have you
-                                        covered.</h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4">
-                    <div class="image-wrapper">
-                        <div class="image-container">
-                            <img src="images/About/About2.png" alt="Image">
-                            <div class="overlay">
-                                <div class="text">
-                                    <h3 class="title">
-                                        About us
-                                    </h3>
-                                    <h5 class="description">AKSHARA Consultancy is a dynamic and forward-thinking company
-                                        dedicated to delivering innovative solutions for both the private and public
-                                        sectors. With a mission to bridge the gap between technology and excellence, we
-                                        bring together talent, creativity, and expertise to solve complex challenges.
-                                        <br>
-                                        Our mission is to empower organizations to achieve their goals by providing them
-                                        with the best IT talent available. We also aim to empower individuals with the
-                                        skills and knowledge they need to thrive in the ever-evolving IT landscape.
-                                    </h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4">
-                    <div class="image-wrapper">
-                        <div class="image-container">
-                            <img src="images/About/About3.png" alt="Image">
-                            <div class="overlay">
-                                <div class="text">
-                                    <h3 class="title">
-                                        Our Approach
-                                    </h3>
-                                    <h5 class="description">
-                                        <ul style="text-align: left;">
-                                            <li>IT Staffing: Connecting organizations with top-tier IT professionals who
-                                                possess the skills and experience needed to thrive in today's digital
-                                                world.
-                                            </li><br>
-                                            <li>Software Development: Crafting bespoke software solutions that empower
-                                                businesses and government agencies to achieve their goals efficiently
-                                                and
-                                                effectively.</li><br>
-                                            <li>IT Training: Equipping individuals and teams with the knowledge and
-                                                skills
-                                                to stay at the forefront of the ever-evolving IT landscape.</li><br>
-                                            <li>Government Projects: Collaborating with government entities to develop
-                                                tailored software solutions that enhance public services and streamline
-                                                operations.</li>
-                                        </ul>
-                                    </h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4" id="columnfourth">
-                    <div class="image-wrapper">
-                        <div class="image-container">
-                            <img src="images/About/About4.png" alt="Image">
-                            <div class="overlay">
-                                <div class="text">
-                                    <h3 class="title">
-                                        WHY CHOOSE AKSHARA CONSULTANCY?
-                                    </h3>
-                                    <h5 class="description">
-                                        <ul style="text-align: left;">
-                                            <li>Experience: We bring a wealth of experience and expertise to every
-                                                project, ensuring successful outcomes.</li>
-                                            <li>Innovation: Our commitment to innovation means you receive cutting-edge
-                                                technology solutions that keep you ahead of the competition.</li>
-                                            <li>Partnership: We view our clients as partners and work collaboratively to
-                                                achieve shared objectives.</li>
-                                            <li>Impact: Our government projects make a real impact by enhancing public
-                                                services and government operations.</li>
-                                        </ul>
-                                    </h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row" id="SecondAbout">
-                <div class="col-lg-12">
-                    <div class="heading">
-                        <h3>"We bring the right people together to challenge established thinking and drive
-                            transformation."</h3>
-                    </div>
-                </div>
-
-                <div class="col-lg-4">
-                    <div class="content-wrapper">
-                        <img src="images/About/About5.jpg" alt="">
-                        <div class="heading">
-                            <h2>We Innovate</h2>
-                            <h5>We innovate systematically, continuously <br>and successfully.</h5>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4">
-                    <div class="content-wrapper">
-                        <img src="images/About/About6.png" alt="">
-                        <div class="heading">
-                            <h2>Performance</h2>
-                            <h5>Performance is about solving problems <br>and building business.</h5>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4">
-                    <div class="content-wrapper">
-                        <img src="images/About/About7.png" alt="">
-                        <div class="heading">
-                            <h2>A Full Service</h2>
-                            <h5>We are a full service business solutions <br> provider.</h5>
-                        </div>
-                    </div>
+            <div style="display:flex;align-items:center;gap:12px">
+                <!-- <a class="cta" href="#contact">Get Started</a> -->
+                <div class="hamburger" id="hamburger" aria-label="Open menu" role="button" tabindex="0">
+                    <div class="bar"></div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- -----------------------------------------------------------------service---------------------------------------- -->
-    <div id="Service" style="background-color:white;">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="serviceheading">
-                        <h2>Discover Our Services</h2>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="service-content-wrapper">
-                        <img src="images/services/service1.png" alt="">
-                        <div class="heading">
-                            <h2>IT Training:</h2>
-                            <h4>IT Training: Continuous learning is key to success in the IT field. Our comprehensive IT
-                                training programs (JAVA, .NET, Python, Web development, Business Analytics, Microsoft
-                                Power BI, Artificial Intelligence) empower individuals and organizations to stay
-                                up-to-date with the latest technologies. Our courses are designed and taught by industry
-                                experts who are passionate about sharing their knowledge.</h4>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4">
-                    <div class="service-content-wrapper">
-                        <img src="images/services/service2.png" alt="">
-                        <div class="heading">
-                            <h2>Government IT Projects:</h2>
-                            <h4>Government Software Development Projects: We are proud to partner with government
-                                agencies on software development projects that drive positive change. Our team
-                                understands the unique challenges faced by the public sector and is dedicated to
-                                creating innovative solutions that improve citizen services and operational efficiency.
-                            </h4>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4">
-                    <div class="service-content-wrapper">
-                        <img src="images/services/service3.png" alt="">
-                        <div class="heading">
-                            <h2>IT & Non-IT Staffing:</h2>
-                            <h4>IT & Non-IT Staffing: Our staffing services are designed to help organizations find the
-                                perfect talent for their needs. Whether you're looking for temporary, permanent, or
-                                contract IT professionals, we have an extensive network of candidates ready to
-                                contribute their expertise to your team.</h4>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="service-content-wrapper">
-                        <img src="images/services/service4.jpg" alt="">
-                        <div class="heading">
-                            <h2>Software Development:</h2>
-                            <h4>Software Development: In today's digital age, staying competitive requires cutting-edge
-                                technology solutions. Our IT development services are designed to help businesses of all
-                                sizes transform their ideas into reality. From custom software development to web and
-                                mobile app development, our team of experienced developers can bring your projects to
-                                life. </h4>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4">
-                    <div class="service-content-wrapper">
-                        <img src="images/services/service5.jpg" alt="">
-                        <div class="heading">
-                            <h2>App Development:</h2>
-                            <h4>"Transforming ideas into intuitive and dynamic applications is our expertise. With a
-                                keen eye for user experience and cutting-edge technology. From concept to deployment,
-                                our streamlined development process
-                                ensures timely delivery without compromising quality. Elevate your digital presence and
-                                engage your audience with our top-notch app development services. Let's bring your
-                                vision to life.</h4>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4">
-                    <div class="service-content-wrapper">
-                        <img src="images/services/service6.jpg" alt="">
-                        <div class="heading">
-                            <h2>Data Analysis:</h2>
-                            <h4>" We delve
-                                deep into your datasets, uncovering valuable insights to drive informed decision-making,
-                                we extract
-                                actionable intelligence that empowers your business. From data cleansing to
-                                visualization, we streamline the analysis process, delivering meaningful results
-                                efficiently. Partner with us to harness the full potential of your data and stay ahead
-                                in today's data-driven landscape."</h4>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4">
-                    <div class="service-content-wrapper">
-                        <img src="images/services/service7.jpg" alt="">
-                        <div class="heading">
-                            <h2>Finance Services:</h2>
-                            <h4>" We offer expert financial solutions designed to help individuals and businesses
-                                manage, grow, and protect their wealth. From strategic planning to investment guidance
-                                and risk management, our team delivers trusted support at every stage. With a focus on
-                                clarity and results, we ensure your financial goals are always within reach."</h4>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4">
-                    <div class="service-content-wrapper">
-                        <img src="images/realestate.jpg" alt="">
-                        <div class="heading">
-                            <h2>Real Estate:</h2>
-                            <h4>" we provide comprehensive real estate services designed to make buying, selling, and
-                                investing seamless and stress-free.From property evaluations
-                                and strategic marketing to negotiations and closing suppor.Whether you're looking for your dream home or maximizing the
-                                value of your property, we’re committed to delivering exceptional results. Your goals
-                                are our priority."</h4>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+        <!-- mobile menu (hidden on desktop) -->
+        <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#candidates">Candidates</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
         </div>
-    </div>
+    </header>
 
-    <!-- -------------------------------------------------------------------contact-------------------------------------- -->
-    <div id="Contact">
-        <div class="container">
-            <div class="row">
+    <main class="wrap" id="home">
 
-                <div class="col-lg-12">
-                    <h2>Contact Us</h2>
+        <section class="hero">
+            <div class="hero-left">
+                <div class="eyebrow reveal" style="transition-delay:60ms">Trusted since 2016</div>
+                <h2 class="reveal" style="transition-delay:140ms">Premium talent &amp; sector expertise for Banking,
+                    Automobile, Insurance & Real Estate</h2>
+                <p class="reveal" style="transition-delay:220ms">We place verified professionals, close critical roles
+                    quickly, and consult on property and insurance portfolios for corporate and private clients. Focused
+                    search, discreet engagement, measurable results.</p>
+
+                <div class="features reveal" style="transition-delay:320ms">
+                    <div class="pill">■ Executive Hiring</div>
+                    <div class="pill">■ Campus &amp; Lateral</div>
+                    <div class="pill">■ Real Estate Advisory</div>
+                    <div class="pill">■ Insurance Solutions</div>
                 </div>
 
-                <div class="col-lg-6" id="col-lg-61">
-                    <div class="offices">
-                        <div class="officeadd">
-                            <h3>Our Offices </h3>
-                        </div>
-
-                        <div class="address">
-                            <h4>BENGALURU</h4>
-                            <h4>55, 10TH CROSS ROAD, WEST OF CHORD ROAD, MAHALAKSHMIPURAM, BENGALURU - 560 086</h4>
-                            <ul class="email">
-                                <li><img src="images/contact/email.jpg" alt=""></li>
-                                <li>
-                                    <h3>Email:</h3>
-                                    <h4>xyz@gmail.com</h4>
-                                </li>
-                            </ul>
-
-                            <ul class="number">
-                                <li><img src="images/contact/contact.jpg" alt=""></li>
-                                <li>
-                                    <h3>Contact No:</h3>
-                                    <h4>9019040404</h4>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-6">
-                    <div class="map">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.5681664718654!2d77.54660607484183!3d12.999448987318484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3d9aa2f9d33b%3A0x16a46e65d97d3cf3!2s55%2C%2010th%20Cross%20Rd%2C%20West%20of%20Chord%20Road%202nd%20Stage%2C%20West%20of%20Chord%20Road%2C%20Stage%202%2C%20Basaveshwar%20Nagar%2C%20Bengaluru%2C%20Karnataka%20560086!5e0!3m2!1sen!2sin!4v1715062151530!5m2!1sen!2sin"
-                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
+                <div class="actions reveal" style="transition-delay:420ms">
+                    <button class="btn btn-primary" onclick="scrollToContact()">Request Talent</button>
+                    <button class="btn btn-ghost" onclick="learnMore()">How we work</button>
                 </div>
 
             </div>
 
-            <div class="row" id="form">
-                <h2>Have Any Questions? Let's Answer Them</h2>
-                <form action="#" method="post">
-                    <ul>
-                        <li>
-                            <div class="form-group">
-                                <label for="name">Name:</label>
-                                <input type="text" id="name" name="name" required>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="form-group">
-                                <label for="email">Email:</label>
-                                <input type="email" id="email" name="email" required>
-                            </div>
-                        </li>
-                    </ul>
-                    <div class="form-group">
-                        <label for="subject">Subject:</label>
-                        <input type="text" id="subject" name="subject" required>
+            <aside class="hero-right reveal" style="transition-delay:160ms">
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+                    <strong>Quick Stats</strong>
+                    <small style="color:var(--muted)">Updated</small>
+                </div>
+                <div class="stats">
+                    <div class="stat">
+                        <div class="num" data-target="352">0</div>
+                        <div class="label">Roles filled</div>
                     </div>
-                    <div class="form-group">
-                        <label for="message">Your Message:</label>
-                        <textarea id="message" name="message" rows="4" required></textarea>
+                    <div class="stat">
+                        <div class="num" data-target="128">0</div>
+                        <div class="label">Partner clients</div>
                     </div>
-                    <button type="submit">Submit</button>
-                </form>
+                    <div class="stat">
+                        <div class="num" data-target="94">0</div>
+                        <div class="label">Avg days to hire</div>
+                    </div>
+                </div>
+
+                <div style="margin-top:16px">
+                    <div class="card" style="display:flex;align-items:center;gap:12px">
+                        <div
+                            style="width:58px;height:58px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:grid;place-items:center;font-weight:800;color:#051325">
+                            HR</div>
+                        <div>
+                            <div style="font-weight:700">Talent Screening</div>
+                            <div style="font-size:13px;color:var(--muted)">Resume shortlisting • Interviews • Background
+                                checks</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin-top:14px;display:flex;gap:8px">
+                    <div class="pill">Verified CVs</div>
+                    <div class="pill">Video Interviews</div>
+                </div>
+            </aside>
+
+        </section>
+
+        <div class="services" id="services">
+            <div class="serviceheading">
+                <h3>Services by Akshara Consultancy</h3>
             </div>
+
+            <div class="card">
+                <h4>Banking &amp; Finance Hiring</h4>
+                <p>
+                    End-to-end recruitment for Retail, Corporate & Investment Banking roles.
+                    Expertise in <b>Risk, Credit, Branch Operations, Audit, Assets & Liabilities</b>.
+                    Includes candidate screening, reference checks, and complete background verification before
+                    onboarding.
+                </p>
+            </div>
+
+            <div class="card">
+                <h4>Automobile Industry</h4>
+                <p>
+                    Hiring for <b>OEMs, Dealerships & Service Networks</b>.
+                    We support recruitment for <b>Sales Executives, Service Advisors, Technicians, Floor Managers</b>
+                    along with leadership roles to drive business growth and after-sales excellence.
+                </p>
+            </div>
+
+            <div class="card">
+                <h4>Real Estate Advisory</h4>
+                <p>
+                    Guidance on <b>NA/AG plots, residential layouts, commercial sites & investment properties</b>.
+                    We help with property verification, market valuation, legal status checks,
+                    and connect buyers with genuine sellers for smooth transactions.
+                </p>
+            </div>
+
+            <div class="card">
+                <h4>Insurance Solutions</h4>
+                <p>
+                    Assistance with <b>Life, Health, Motor & Corporate Insurance</b>.
+                    We support clients with policy comparison, benefits explanation, documentation,
+                    renewals, endorsements, and claims support for faster settlements.
+                </p>
+            </div>
+
+            <div class="card">
+                <h4>Financial Advisory (Add-On)</h4>
+                <p>
+                    Personalized guidance on <b>SIP planning, term insurance, tax-saving instruments,
+                        retirement plans, and wealth management</b> based on customer needs.
+                    Non-biased recommendations with complete transparency.
+                </p>
+            </div>
+
+            <div class="card">
+                <h4>Corporate Hiring Solutions</h4>
+                <p>
+                    Bulk hiring, campus hiring, contract staffing and leadership hiring for
+                    <b>startups, SMBs & enterprise companies</b>.
+                    Includes screening, scheduling, negotiation, and joining coordination.
+                </p>
+            </div>
+
         </div>
-    </div>
 
-    <!-- --------------------------------------------------------------------footer----------------------------------------- -->
-    <div id="footer">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-3">
-                    <div class="logofooter">
-                        <img src="images/logo.png" alt="">
-                    </div>
-                    <div class="logotext">
-                        <h4>Revolutionizing businesses with tech solutions.</h4>
-                        <h4>Empowering businesses with digital power.</h4>
-                        <h4>Transforming businesses with digital strategies</h4>
-                    </div>
+
+        <section id="candidates" style="margin-top:28px">
+            <h3 class="reveal" style="margin-bottom:10px">Top Candidates (sample)</h3>
+            <div class="services reveal">
+                <div class="card">
+                    <h4>Senior Relationship Manager</h4>
+                    <p>10+ yrs | NRI banking | wealth portfolio experience</p>
+                </div>
+                <div class="card">
+                    <h4>Service Manager — Automobile</h4>
+                    <p>7+ yrs | Dealer network & operations</p>
+                </div>
+                <div class="card">
+                    <h4>Property Advisor</h4>
+                    <p>5+ yrs | Retail & commercial sales</p>
+                </div>
+                <div class="card">
+                    <h4>Insurance Underwriter</h4>
+                    <p>4+ yrs | Corporate & retail underwriting</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="reveal" style="margin-top:28px">
+            <div class="about-container">
+                <h3>About Akshara Consultancy</h3>
+
+                <p>
+                    Akshara Consultancy is a multi-sector staffing and advisory partner trusted by companies across
+                    <b>Banking, Finance, Automobile, Insurance, and Real Estate</b>.
+                    Our mission is to deliver dependable talent and transparent advisory solutions that create long-term
+                    stability
+                    for both businesses and individuals.
+
+                    <br><br>
+
+                    With years of hands-on hiring expertise, we follow a structured evaluation process involving
+                    <b>competency-based screening, culture-fit assessment, detailed reference checks, and employment
+                        verification</b>.
+                    Whether it’s <b>executive headhunting</b>, <b>frontline recruitment</b>, or <b>bulk onboarding</b>,
+                    we ensure organizations get candidates who are professional, reliable, and aligned with business
+                    goals.
+
+                    <br><br>
+
+                    Beyond recruitment, we extend our services into <b>Real Estate Advisory</b>, helping clients with
+                    NA/AG property
+                    verification, land valuation, documentation guidance, and investment evaluation.
+                    Our <b>Insurance Support</b> wing assists clients with policy planning, renewals, and
+                    claims—ensuring a smooth
+                    experience without confusion.
+
+                    <br><br>
+
+                    At Akshara Consultancy, we believe in <b>honesty, clear communication, and long-term
+                        relationships</b>.
+                    Every service we offer—whether hiring, property guidance, or insurance assistance—is built on trust,
+                    professionalism, and the promise to create real value for our clients.
+                </p>
+            </div>
+        </section>
+
+
+
+        <section id="contact" style="margin-top:28px" class="reveal">
+            <div class="contact-container">
+                <h3>Contact Us</h3>
+
+                <p class="contact-text">
+                    We are here to assist you with recruitment, advisory, insurance and real estate queries.
+                    Reach out to us for hiring support, consultation, collaborations or service-related enquiries.
+                    Our team responds within <b>24 hours</b>.
+                </p>
+
+                <div class="contact-details">
+                    <p><span>📧</span> Email: <b>hello@akshara.consult</b></p>
+                    <p><span>📞</span> Phone: <b>+91 90000 00000</b></p>
+                    <p><span>📍</span> Location: Bengaluru, Karnataka</p>
+                    <p><span>⏰</span> Working Hours: Mon–Sat, 10 AM – 6 PM</p>
                 </div>
 
-                <div class="col-lg-3">
-                    <div class="footerservices">
-                        <div class="serviceslinks">
-                            <h4>Services</h4>
-                        </div>
-                        <ul>
-                            <li>
-                                <h4>IT Training</h4>
-                            </li>
-                            <li>
-                                <h4>Government IT Projects</h4>
-                            </li>
-                            <li>
-                                <h4>IT & Non-IT Staffing</h4>
-                            </li>
-                            <li>
-                                <h4>Software Development</h4>
-                            </li>
-                            <li>
-                                <h4>Web Development</h4>
-                            </li>
-                            <li>
-                                <h4>App Development</h4>
-                            </li>
-                            <li>
-                                <h4>Data Analysis</h4>
-                            </li>
-                        </ul>
-                    </div>
+                <div class="contact-buttons">
+                    <a class="btn btn-primary" href="mailto:hello@akshara.consult">Email Us</a>
+                    <a class="btn btn-ghost" href="#">Book a Call</a>
+                    <a class="btn btn-primary" href="#">WhatsApp</a>
+                </div>
+            </div>
+        </section>
+
+        <footer class="desktop-footer">
+            <div class="footer-container">
+
+                <div class="footer-left">
+                    <p>© 2025 Akshara Consultancy • All Rights Reserved</p>
+                    <p class="designed">Designed by <strong>Naveen Bellad</strong></p>
                 </div>
 
-                <div class="col-lg-3">
-                    <div class="footerlinks">
-                        <div class="links">
-                            <h4>UseFul Links</h4>
-                        </div>
-                        <ul>
-                            <li><a href="">
-                                    <h4>Google</h4>
-                                </a></li>
-                            <li><a href="">
-                                    <h4>Linkedin</h4>
-                                </a></li>
-                            <li><a href="">
-                                    <h4>Wikipedia</h4>
-                                </a></li>
-                            <li><a href="">
-                                    <h4>Dribble</h4>
-                                </a></li>
-                        </ul>
-                    </div>
-                </div>
+                <div class="footer-right">
+                    <span>Follow us:</span>
 
-                <div class="col-lg-3">
-                    <div class="footercontact">
-                        <div class="contact">
-                            <h4>Contact Us</h4>
-                        </div>
-                        <div class="address">
-                            <h4>BENGALURU</h4>
-                            <h4>55, 10TH CROSS ROAD, WEST OF CHORD ROAD, MAHALAKSHMIPURAM, BENGALURU - 560 086</h4>
-                            <ul class="email">
-                                <li><img src="images/contact/email.jpg" alt=""></li>
-                                <li>
-                                    <h4>Email:</h4>
-                                    <h4>xyz@gmail.com</h4>
-                                </li>
-                            </ul>
+                    <a href="#" class="social-icon instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
 
-                            <ul class="number">
-                                <li><img src="images/contact/contact.jpg" alt=""></li>
-                                <li>
-                                    <h4>Contact No:</h4>
-                                    <h4>9019040404</h4>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+                    <a href="#" class="social-icon facebook">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+
+                    <a href="#" class="social-icon linkedin">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
                 </div>
 
             </div>
+        </footer>
 
-            <div class="row">
-                <div class="copyright">
-                    <h6>COPYRIGHT © 2023 AKSHARA CONSULTANCY SERVICES - ALL RIGHTS RESERVED.</h6>
-                </div>
-            </div>
-        </div>
-    </div>
+
+    </main>
+
+
+
+    <script>
+        // Hamburger toggle
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+        hamburger.addEventListener('click', () => {
+            mobileMenu.classList.toggle('show');
+            const shown = mobileMenu.classList.contains('show');
+            mobileMenu.setAttribute('aria-hidden', !shown);
+        });
+
+        // simple reveal on scroll for .reveal items
+        const reveals = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) e.target.classList.add('show');
+            })
+        }, { threshold: 0.12 });
+        reveals.forEach(r => observer.observe(r));
+
+        // animated stat counters
+        const nums = document.querySelectorAll('.num');
+        nums.forEach(el => {
+            const target = +el.getAttribute('data-target') || 0;
+            let current = 0;
+            const step = Math.max(1, Math.floor(target / 60));
+            const id = setInterval(() => {
+                current += step;
+                if (current >= target) { el.textContent = target; clearInterval(id); } else el.textContent = current;
+            }, 18);
+        });
+
+        // decorative blob floating animation (subtle)
+        const blobA = document.querySelector('.blob-a');
+        const blobB = document.querySelector('.blob-b');
+        let t = 0;
+        function floatBlobs() {
+            t += 0.012;
+            blobA.style.transform = `translate3d(${Math.sin(t) * 18}px, ${Math.cos(t) * 10}px,0) rotate(${t * 12}deg)`;
+            blobB.style.transform = `translate3d(${Math.cos(t) * 22}px, ${Math.sin(t) * 12}px,0) rotate(-${t * 8}deg)`;
+            requestAnimationFrame(floatBlobs);
+        }
+        requestAnimationFrame(floatBlobs);
+
+        // helpers
+        function scrollToContact() {
+            const el = document.getElementById('contact');
+            if (!el) return; window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 80, behavior: 'smooth' });
+        }
+        function learnMore() {
+            alert('We run a staged hiring process: Intake → Shortlist → Screening → Interview → Offer.\nContact us to get a detailed process map.');
+        }
+
+        // accessibility: allow Enter key on hamburger
+        hamburger.addEventListener('keydown', (e) => { if (e.key === 'Enter') hamburger.click(); });
+
+    </script>
+
+
 </body>
-
 
 </html>
