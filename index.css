@@ -896,101 +896,166 @@ button[type="submit"]:hover {
 
 /* ----------- Small Phones (max-width: 576px) ----------- */
 @media (max-width: 576px) {
-  body
-    h3,h4{
-      font-size: 15px;
-    
-  }
-  .navbar-menu {
-    margin-right: 0px;
-    margin-top: 0px;
+
+  body h3,
+  h4 {
+    font-size: 15px;
+
   }
 
-  .icon {
-    margin: 1px 0;
-  }
-
-  .navbar-brand img {
-    width: 80px;
-    height: 80px;
-  }
-
-  #carousel {
-    margin-top: 95px;
-    height: 295px;
-  }
-
-  .carousel-inner {
-    height: 295px;
-  }
-
-  .carousel-caption {
-    top: 40%;
-  }
-
-  .carousel-caption h1 {
-    font-size: 20px;
-  }
-
-  .carousel-inner>.item>a>img,
-  .carousel-inner>.item>img,
-  .img-responsive,
-  .thumbnail a>img,
-  .thumbnail>img {
-    height: 295px;
-  }
-
-  /* About */
-  #FirstAbout {
-    margin-top: 0px;
-  }
-
-  #SecondAbout .heading h2 {
-    font-size: 20px;
-  }
-
-  #columnfourth {
-    margin-top: 20px;
-    margin-left: 0;
-  }
-
-  .content-wrapper {
-    height: 300px;
-  }
-
-  #SecondAbout .col-lg-4 {
-    /* border: 2px solid red; */
-    height: 330px;
-  }
-
-  /* Contact Form */
-  #form {
-    width: 90%;
-    padding: 10px;
-  }
-
-  .form-group {
-    margin-bottom: 5px;
-  }
-
-  input[type="text"],
-  input[type="email"] {
+  .hire {
     width: 100%;
-    margin-right: 0;
+    font-size: 16px;
+    padding: 0px;
+  }
+
+  .hire h5 {
+    font-size: 14px;
+  }
+
+  /* Popup box */
+  .popup {
+    width: 90%;
+    height: auto;
+    max-height: 90vh;
+    padding: 15px;
+    overflow-y: auto;
+    border-radius: 10px;
+  }
+
+  .popup h2 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  /* Close button */
+  .popup .close {
+    top: 5px;
+    right: 10px;
+    font-size: 24px;
+  }
+
+  /* Form fields */
+  .popup form {
+    width: 100%;
+  }
+
+  .popup label {
+    font-size: 14px;
+  }
+
+  .popup input[type="text"],
+  .popup input[type="email"],
+  .popup input[type="file"],
+  .popup textarea {
+    width: 100%;
+    font-size: 14px;
+    padding: 8px;
+    margin-bottom: 10px;
   }
 
   textarea {
-    height: 120px;
+    height: 80px;
   }
 
-  /* Icons (Fixed Sidebar) */
-  .social-icons {
-    right: 10px;
+  .popup input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
   }
 
-  .social-icon img {
-    width: 32px;
-  }
+
+.navbar-menu {
+  margin-right: 0px;
+  margin-top: 0px;
+}
+
+.icon {
+  margin: 1px 0;
+}
+
+.navbar-brand img {
+  width: 80px;
+  height: 80px;
+}
+
+#carousel {
+  margin-top: 95px;
+  height: 295px;
+}
+
+.carousel-inner {
+  height: 295px;
+}
+
+.carousel-caption {
+  top: 40%;
+}
+
+.carousel-caption h1 {
+  font-size: 20px;
+}
+
+.carousel-inner>.item>a>img,
+.carousel-inner>.item>img,
+.img-responsive,
+.thumbnail a>img,
+.thumbnail>img {
+  height: 295px;
+}
+
+/* About */
+#FirstAbout {
+  margin-top: 0px;
+}
+
+#SecondAbout .heading h2 {
+  font-size: 20px;
+}
+
+#columnfourth {
+  margin-top: 20px;
+  margin-left: 0;
+}
+
+.content-wrapper {
+  height: 300px;
+}
+
+#SecondAbout .col-lg-4 {
+  /* border: 2px solid red; */
+  height: 330px;
+}
+
+/* Contact Form */
+#form {
+  width: 90%;
+  padding: 10px;
+}
+
+.form-group {
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+  margin-right: 0;
+}
+
+textarea {
+  height: 120px;
+}
+
+/* Icons (Fixed Sidebar) */
+.social-icons {
+  right: 10px;
+}
+
+.social-icon img {
+  width: 32px;
+}
 }
 
 /* ----------- Extra Small Phones (max-width: 480px) ----------- */
