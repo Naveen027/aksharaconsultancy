@@ -461,7 +461,7 @@ nav a:hover {
   font-size: 16.5px;
   line-height: 1.85;
   color: #e8e8e8;
-
+  text-align: justify;
   opacity: 0;
   transform: translateY(40px);
   animation: aboutFadeUp 1s ease forwards;
@@ -601,174 +601,82 @@ nav a:hover {
   }
 }
 
- .desktop-footer {
-    background: #0d1b2a;
-    padding: 28px 40px;
-    color: #cfd6e1;
-    margin-top: 50px;
+.desktop-footer {
+  background: #0d1b2a;
+  padding: 28px 40px;
+  color: #cfd6e1;
+  margin-top: 50px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-left p {
+  margin: 4px 0;
+  font-size: 14px;
+  color: #cbd4e0;
+}
+
+.footer-left .designed strong {
+  color: #fff;
+}
+
+.footer-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 15px;
+}
+
+.social-icon {
+  font-size: 20px;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 10px;
+  border-radius: 50%;
+  transition: 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  animation: bounceIcon 3s infinite;
+}
+
+.footer-right a {
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  background: rgba(255, 255, 255, 0.18);
+  transform: scale(1.08);
+}
+
+/* Bounce Animation Every 3 Sec */
+@keyframes bounceIcon {
+
+  0%,
+  92% {
+    transform: translateY(0);
   }
 
-  .footer-container {
-    max-width: 1200px;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  95% {
+    transform: translateY(-5px);
   }
 
-  .footer-left p {
-    margin: 4px 0;
-    font-size: 14px;
-    color: #cbd4e0;
-  }
-
-  .footer-left .designed strong {
-    color: #fff;
-  }
-
-  .footer-right {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    font-size: 15px;
-  }
-
-  .social-icon {
-    font-size: 20px;
-    color: #ffffff;
-    background: rgba(255, 255, 255, 0.08);
-    padding: 10px;
-    border-radius: 50%;
-    transition: 0.3s ease;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 42px;
-    height: 42px;
-    animation: bounceIcon 3s infinite;
-  }
-
-   .footer-right  a{
-    text-decoration: none;
-  }
-
-  .social-icon:hover {
-    background: rgba(255, 255, 255, 0.18);
-    transform: scale(1.08);
-  }
-
-  /* Bounce Animation Every 3 Sec */
-  @keyframes bounceIcon {
-    0%, 92% {
-      transform: translateY(0);
-    }
-    95% {
-      transform: translateY(-5px);
-    }
-    100% {
-      transform: translateY(0);
-    }
-  }
-
-
-
-/* small screens (mobile only) */
-@media (max-width:480px) {
-  header {
-    /* top: 10px; */
-    margin: 0 0px;
-    padding: 0px;
-  }
-
-  .wrap {
-    padding: 10px
-  }
-
-  .nav {
-    gap: 8px
-  }
-
-  .brand h1 {
-    font-size: 14px
-  }
-
-  .brand p {
-    display: none
-  }
-
-  nav ul {
-    display: none
-  }
-
-  .hamburger {
-    display: flex
-  }
-
-  .hero {
-    grid-template-columns: 1fr;
-    gap: 18px;
-    padding: 92px 0 30px
-  }
-
-  .hero h2 {
-    font-size: 28px
-  }
-
-  .hero-right {
-    order: 2
-  }
-
-  .hero-left {
-    order: 1;
-    padding-right: 0
-  }
-
-  .hero p {
-    font-size: 14px
-  }
-
-  .services {
-    grid-template-columns: 1fr;
-    gap: 12px
-  }
-
-  .stats {
-    flex-direction: row;
-    gap: 12px
-  }
-
-  .hirebar {
-    flex-direction: column;
-    align-items: stretch;
-    padding: 10px
-  }
-
-  /* mobile nav menu panel */
-  .mobile-menu {
-    position: fixed;
-    left: 10px;
-    right: 10px;
-    top: 72px;
-    background: linear-gradient(135deg, #001f3f, #004b8d);
-    border-radius: 12px;
-    padding: 12px;
-    box-shadow: 0 14px 50px rgba(2, 6, 23, 0.6);
-    display: none;
-    z-index: 80
-  }
-
-  .mobile-menu.show {
-    display: block
-  }
-
-  .mobile-menu a {
-    text-decoration: none;
-    display: block;
-    padding: 12px 10px;
-    border-radius: 8px;
-    color:white
+  100% {
+    transform: translateY(0);
   }
 }
+
+
+
+
 
 /* intentionally no 'tablet' breakpoint - tablet will keep desktop layout, per request */
 
@@ -835,64 +743,211 @@ nav a:hover {
 /* MOBILE FOOTER OVERRIDE */
 
 
-  .desktop-footer {
-    padding: 20px;
-    background: #001f3f;
-    color: #fff;
-    text-align: center;
-    margin-top: 0px;
+.desktop-footer {
+  padding: 20px;
+  background: #001f3f;
+  color: #fff;
+  text-align: center;
+  margin-top: 0px;
+}
+
+.desktop-footer .footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Icons first, side by side */
+.desktop-footer .footer-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+/* Bounce animation */
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: translateY(0);
   }
 
-  .desktop-footer .footer-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
+  50% {
+    transform: translateY(-5px);
   }
+}
 
-  /* Icons first, side by side */
-  .desktop-footer .footer-right {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    flex-wrap: wrap;
-    margin-bottom: 10px;
+.desktop-footer .social-icon {
+  font-size: 24px;
+  color: #fff;
+  display: inline-block;
+  animation: bounce 1s ease-in-out infinite;
+}
+
+/* stagger each icon */
+.desktop-footer .social-icon.instagram {
+  animation-delay: 0s;
+}
+
+.desktop-footer .social-icon.facebook {
+  animation-delay: 0.5s;
+}
+
+.desktop-footer .social-icon.linkedin {
+  animation-delay: 1s;
+}
+
+.desktop-footer .social-icon:hover {
+  color: #ffcc00;
+  /* optional hover color */
+}
+
+/* Text below icons */
+.desktop-footer .footer-left {
+  text-align: center;
+}
+
+.desktop-footer .footer-left p {
+  margin: 4px 0;
+  font-size: 14px;
+}
+
+.desktop-footer .footer-left .designed {
+  font-size: 13px;
+}
+
+.theme-btn {
+  background: rgba(253, 253, 253, 0.889);
+  border: 0;
+  padding: 10px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  color: #093e74;
+  transition: 0.3s ease;
+}
+
+  /* small screens (mobile only) */
+  @media (max-width:768px) {
+    header {
+      /* top: 10px; */
+      margin: 0 0px;
+      padding: 0px;
+    }
+
+    .wrap {
+      padding: 10px
+    }
+
+    .nav {
+      gap: 8px
+    }
+
+    .brand h1 {
+      font-size: 14px
+    }
+
+    .brand p {
+      display: none
+    }
+
+    nav ul {
+      display: none
+    }
+
+    .hamburger {
+      display: flex
+    }
+
+    .hero {
+      grid-template-columns: 1fr;
+      gap: 18px;
+      padding: 92px 0 30px
+    }
+
+    .hero h2 {
+      font-size: 28px
+    }
+
+    .hero-right {
+      order: 2
+    }
+
+    .hero-left {
+      order: 1;
+      padding-right: 0
+    }
+
+    .hero p {
+      font-size: 14px
+    }
+
+    .services {
+      grid-template-columns: 1fr;
+      gap: 12px
+    }
+
+    .stats {
+      flex-direction: row;
+      gap: 12px
+    }
+
+    .hirebar {
+      flex-direction: column;
+      align-items: stretch;
+      padding: 10px
+    }
+
+    /* mobile nav menu panel */
+    .mobile-menu {
+      position: fixed;
+      left: 10px;
+      right: 10px;
+      top: 72px;
+      background: linear-gradient(135deg, #001f3f, #004b8d);
+      border-radius: 12px;
+      padding: 12px;
+      box-shadow: 0 14px 50px rgba(2, 6, 23, 0.6);
+      display: none;
+      z-index: 80
+    }
+
+    .mobile-menu.show {
+      display: block
+    }
+
+    .mobile-menu a {
+      text-decoration: none;
+      display: block;
+      padding: 12px 10px;
+      border-radius: 8px;
+      color: white
+    }
+   #about {
+    padding: 10px 20px;
+    }
+
+    #about h3{
+      font-size: 25px;
+    }
+    /* THEME TOGGLE BUTTON */
+    .theme-btn {
+      background: rgba(253, 253, 253, 0.889);
+      border: 0;
+      padding: 10px 14px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 18px;
+      color: #093e74;
+      transition: 0.3s ease;
+    }
+
+    .theme-btn:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
   }
-
-  /* Bounce animation */
-  @keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-5px); }
-  }
-
-  .desktop-footer .social-icon {
-    font-size: 24px;
-    color: #fff;
-    display: inline-block;
-    animation: bounce 1s ease-in-out infinite;
-  }
-
-  /* stagger each icon */
-  .desktop-footer .social-icon.instagram { animation-delay: 0s; }
-  .desktop-footer .social-icon.facebook { animation-delay: 0.5s; }
-  .desktop-footer .social-icon.linkedin { animation-delay: 1s; }
-
-  .desktop-footer .social-icon:hover {
-    color: #ffcc00; /* optional hover color */
-  }
-
-  /* Text below icons */
-  .desktop-footer .footer-left {
-    text-align: center;
-  }
-
-  .desktop-footer .footer-left p {
-    margin: 4px 0;
-    font-size: 14px;
-  }
-
-  .desktop-footer .footer-left .designed {
-    font-size: 13px;
-  }
-

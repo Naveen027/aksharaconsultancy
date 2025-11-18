@@ -8,149 +8,10 @@
     <meta name="description"
         content="Akshara Consultancy — specialist hiring for banking, automobile, insurance, and real estate sectors. Premium corporate talent solutions." />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
     <link rel="stylesheet" href="index.css">
-    <!-- <style>
-    /* -------------------------
-       Reset & base
-       -------------------------*/
-    :root{
-      --bg:#0f1724; /* deep navy */
-      --card:#0b1220;
-      --accent:#00d4ff;
-      --accent-2:#7c4dff;
-      --muted:#9aa6b2;
-      --glass: rgba(255,255,255,0.04);
-      --glass-2: rgba(255,255,255,0.02);
-      --max-width:1200px;
-      --radius:12px;
-      --ff-sans: 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family:var(--ff-sans);
-      background: radial-gradient(1200px 800px at 10% 10%, rgba(124,77,255,0.08), transparent),
-                  radial-gradient(900px 600px at 90% 80%, rgba(0,212,255,0.04), transparent),
-                  var(--bg);
-      color:#e6eef6;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      line-height:1.45;
-      padding-bottom:80px;
-    }
+    <link rel="stylesheet" href="light.css" id="theme-style">
 
-    /* container */
-    .wrap{max-width:var(--max-width);margin:0 auto;padding:28px;} 
 
-    /* -------------------------
-       Header / Navbar
-       -------------------------*/
-    header{
-      position:fixed;left:0;right:0;top:16px;z-index:60;backdrop-filter: blur(6px);
-      padding:8px 18px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-      border-radius:18px;margin:0 18px;
-      box-shadow:0 6px 20px rgba(2,6,23,0.6);
-    }
-    .nav{display:flex;align-items:center;justify-content:space-between;gap:12px;max-width:var(--max-width);margin:0 auto}
-
-    .brand{display:flex;align-items:center;gap:12px}
-    .logo{
-      width:48px;height:48px;border-radius:10px;display:grid;place-items:center;font-weight:700;
-      background:linear-gradient(135deg,var(--accent),var(--accent-2));box-shadow:0 6px 18px rgba(124,77,255,0.12);color:#071023
-    }
-    .brand h1{font-size:16px;margin:0;letter-spacing:0.4px}
-    .brand p{margin:0;font-size:12px;color:var(--muted)}
-
-    nav ul{display:flex;gap:14px;list-style:none;margin:0;padding:0;align-items:center}
-    nav a{color:inherit;text-decoration:none;padding:8px 12px;border-radius:8px;font-size:14px}
-    nav a:hover{background:var(--glass)}
-
-    .cta{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(90deg,var(--accent),var(--accent-2));padding:10px 14px;border-radius:10px;color:#051325;font-weight:600;text-decoration:none}
-    .cta:active{transform:translateY(1px)}
-
-    /* hamburger for mobile */
-    .hamburger{display:none;cursor:pointer;width:44px;height:44px;border-radius:10px;background:transparent;align-items:center;justify-content:center}
-    .hamburger .bar{width:20px;height:2px;background:#cfefff;border-radius:2px;position:relative}
-    .hamburger .bar::after,.hamburger .bar::before{content:'';position:absolute;left:0;width:20px;height:2px;background:#cfefff;border-radius:2px}
-    .hamburger .bar::before{top:-6px}
-    .hamburger .bar::after{top:6px}
-
-    /* -------------------------
-       Hero
-       -------------------------*/
-    .hero{display:grid;grid-template-columns:1fr 460px;gap:28px;align-items:center;padding:120px 0 60px}
-    .hero-left{padding-right:12px}
-    .eyebrow{display:inline-flex;align-items:center;gap:10px;padding:6px 10px;background:linear-gradient(90deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));border-radius:999px;font-size:13px;color:var(--muted);width:max-content}
-    .hero h2{font-size:44px;margin:18px 0 12px;line-height:1.02;letter-spacing:-1px}
-    .hero p{color:var(--muted);font-size:16px;margin:0 0 18px}
-
-    .hero .features{display:flex;gap:10px;flex-wrap:wrap}
-    .pill{background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:10px 12px;border-radius:999px;font-size:13px;color:var(--muted);display:inline-flex;align-items:center;gap:8px}
-
-    .actions{display:flex;gap:12px;margin-top:18px}
-    .btn{padding:12px 16px;border-radius:10px;border:0;font-weight:700;cursor:pointer}
-    .btn-primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#051325}
-    .btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
-
-    /* hero right: glass card */
-    .hero-right{background:linear-gradient(180deg,var(--glass),var(--glass-2));padding:22px;border-radius:16px;backdrop-filter: blur(8px);box-shadow:0 10px 30px rgba(2,6,23,0.6)}
-    .stats{display:flex;gap:18px;justify-content:space-between}
-    .stat{display:flex;flex-direction:column}
-    .stat .num{font-size:24px;font-weight:800}
-    .stat .label{font-size:12px;color:var(--muted)}
-
-    /* services */
-    .services{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:28px}
-    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.02)}
-    .card h4{margin:8px 0 4px}
-    .card p{margin:0;color:var(--muted);font-size:13px}
-
-    /* animated background shapes */
-    .bg-shape{position:fixed;pointer-events:none;z-index:0;opacity:0.12}
-    .bg-blob{width:280px;height:280px;border-radius:22px;filter:blur(40px);transform:translate3d(0,0,0)}
-    .blob-a{background:linear-gradient(45deg,var(--accent),var(--accent-2));top:60px;left:40px}
-    .blob-b{background:linear-gradient(45deg,var(--accent-2),var(--accent));bottom:40px;right:40px}
-
-    /* footer bar (call to action sticky on desktop) */
-    .hirebar{position:fixed;left:18px;right:18px;bottom:18px;background:linear-gradient(90deg, rgba(0,0,0,0.35), rgba(255,255,255,0.02));padding:12px;border-radius:14px;display:flex;align-items:center;justify-content:space-between;gap:12px;backdrop-filter: blur(6px);box-shadow:0 8px 30px rgba(2,6,23,0.6)}
-    .hirebar .left{display:flex;gap:10px;align-items:center}
-
-    /* small screens (mobile only) */
-    @media (max-width:480px){
-      header{top:10px;margin:0 10px;padding:6px}
-      .wrap{padding:10px}
-      .nav{gap:8px}
-      .brand h1{font-size:14px}
-      .brand p{display:none}
-      nav ul{display:none}
-      .hamburger{display:flex}
-      .hero{grid-template-columns:1fr;gap:18px;padding:92px 0 30px}
-      .hero h2{font-size:28px}
-      .hero-right{order:2}
-      .hero-left{order:1;padding-right:0}
-      .hero p{font-size:14px}
-      .services{grid-template-columns:1fr;gap:12px}
-      .stats{flex-direction:row;gap:12px}
-      .hirebar{flex-direction:column;align-items:stretch;padding:10px}
-
-      /* mobile nav menu panel */
-      .mobile-menu{position:fixed;left:10px;right:10px;top:72px;background:linear-gradient(180deg, rgba(7,18,35,0.98), rgba(7,18,35,0.98));border-radius:12px;padding:12px;box-shadow:0 14px 50px rgba(2,6,23,0.6);display:none;z-index:80}
-      .mobile-menu.show{display:block}
-      .mobile-menu a{display:block;padding:12px 10px;border-radius:8px}
-    }
-
-    /* intentionally no 'tablet' breakpoint - tablet will keep desktop layout, per request */
-
-    /* subtle entrance animations */
-    .reveal{opacity:0;transform:translateY(14px);transition:all 700ms cubic-bezier(.2,.9,.2,1)}
-    .reveal.show{opacity:1;transform:none}
-
-    /* micro-interactions */
-    .card:hover{transform:translateY(-6px);transition:transform 260ms}
-
-  </style> -->
 </head>
 
 <body>
@@ -176,6 +37,8 @@
                     <li><a href="#candidates">Candidates</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#contact">Contact</a></li>
+                    <li><button id="themeToggle" class="theme-btn" onclick="toggleTheme()">🌙</button></li>
+                    <!-- <li><button onclick="toggleTheme()" style="position:fixed; bottom:20px; right:20px;">Toggle Mode</button></li> -->
                 </ul>
             </nav>
 
@@ -194,6 +57,8 @@
             <a href="#candidates">Candidates</a>
             <a href="#about">About</a>
             <a href="#contact">Contact</a>
+            <button id="themeToggleMobile" class="theme-btn" onclick="toggleTheme()">🌙</button>
+
         </div>
     </header>
 
@@ -269,61 +134,71 @@
             </div>
 
             <div class="card">
-                <h4>Banking &amp; Finance Hiring</h4>
+                <h4>Information Technology (IT)</h4>
                 <p>
-                    End-to-end recruitment for Retail, Corporate & Investment Banking roles.
-                    Expertise in <b>Risk, Credit, Branch Operations, Audit, Assets & Liabilities</b>.
-                    Includes candidate screening, reference checks, and complete background verification before
-                    onboarding.
+                    Specialized hiring for <b>Software Developers, Test Engineers, Cloud Specialists, Network Engineers,
+                        Cybersecurity Experts & IT Support roles</b>.
+                    We help companies hire tech talent with the right skillset, experience, and cultural fit.
                 </p>
             </div>
 
             <div class="card">
-                <h4>Automobile Industry</h4>
+                <h4>IT Enabled Services (BPO)</h4>
                 <p>
-                    Hiring for <b>OEMs, Dealerships & Service Networks</b>.
-                    We support recruitment for <b>Sales Executives, Service Advisors, Technicians, Floor Managers</b>
-                    along with leadership roles to drive business growth and after-sales excellence.
+                    Recruitment for <b>Customer Support, Technical Support, Back-Office Operations, Voice & Non-Voice
+                        Processes</b>.
+                    We ensure candidates with excellent communication, process knowledge, and workforce stability.
                 </p>
             </div>
 
             <div class="card">
-                <h4>Real Estate Advisory</h4>
+                <h4>Telecom Sector Hiring</h4>
                 <p>
-                    Guidance on <b>NA/AG plots, residential layouts, commercial sites & investment properties</b>.
-                    We help with property verification, market valuation, legal status checks,
-                    and connect buyers with genuine sellers for smooth transactions.
+                    Talent acquisition for <b>Field Technicians, Network Installation Engineers, Sales Executives,
+                        Customer Service, and Tower Operations</b>.
+                    We support both entry-level and experienced hiring for Telecom service providers.
                 </p>
             </div>
 
             <div class="card">
-                <h4>Insurance Solutions</h4>
+                <h4>Insurance Sector Hiring</h4>
                 <p>
-                    Assistance with <b>Life, Health, Motor & Corporate Insurance</b>.
-                    We support clients with policy comparison, benefits explanation, documentation,
-                    renewals, endorsements, and claims support for faster settlements.
+                    Recruitment for <b>Life, Health, Motor & Corporate Insurance roles</b>.
+                    We help hire <b>Sales Managers, Relationship Managers, Claims Officers,
+                        Underwriting Executives & Branch Support Staff</b> across leading insurance companies.
                 </p>
             </div>
 
             <div class="card">
-                <h4>Financial Advisory (Add-On)</h4>
+                <h4>Manufacturing & Process Industry</h4>
                 <p>
-                    Personalized guidance on <b>SIP planning, term insurance, tax-saving instruments,
-                        retirement plans, and wealth management</b> based on customer needs.
-                    Non-biased recommendations with complete transparency.
+                    Hiring for <b>Production, Quality Control, Maintenance, Engineering, Safety & Plant Operations</b>.
+                    We provide skilled talent for <b>Automobile, Engineering, Machinery, Electrical & Industrial
+                        Plants</b>.
                 </p>
             </div>
 
             <div class="card">
-                <h4>Corporate Hiring Solutions</h4>
+                <h4>Banking & Financial Services</h4>
                 <p>
-                    Bulk hiring, campus hiring, contract staffing and leadership hiring for
-                    <b>startups, SMBs & enterprise companies</b>.
-                    Includes screening, scheduling, negotiation, and joining coordination.
+                    Recruitment for <b>Retail, Corporate & SME Banking</b> including <b>Branch Operations, Audits,
+                        Credit,
+                        Risk, Customer Relationship & Investment Services</b>.
+                    We ensure verified candidates with strong financial knowledge and compliance understanding.
+                </p>
+            </div>
+
+            <div class="card">
+                <h4>Retail Industry Hiring</h4>
+                <p>
+                    End-to-end hiring for <b>Store Managers, Cashiers, Sales Associates, Inventory Staff & Visual
+                        Merchandisers</b>.
+                    We help retail brands hire reliable workforce for smooth store operations and customer engagement.
                 </p>
             </div>
 
         </div>
+
 
 
         <section id="candidates" style="margin-top:28px">
@@ -352,38 +227,36 @@
             <div class="about-container">
                 <h3>About Akshara Consultancy</h3>
 
-                <p>
-                    Akshara Consultancy is a multi-sector staffing and advisory partner trusted by companies across
-                    <b>Banking, Finance, Automobile, Insurance, and Real Estate</b>.
-                    Our mission is to deliver dependable talent and transparent advisory solutions that create long-term
-                    stability
-                    for both businesses and individuals.
+                <div class="company-info">
+                    <p>&#8226; We are based in Bangalore — the Silicon City of India.</p>
 
-                    <br><br>
+                    <p>&#8226; <strong>Akshara Consulting Services</strong> is based in Bangalore and has a dedicated
+                        team of young professionals committed to the company’s mission.</p>
 
-                    With years of hands-on hiring expertise, we follow a structured evaluation process involving
-                    <b>competency-based screening, culture-fit assessment, detailed reference checks, and employment
-                        verification</b>.
-                    Whether it’s <b>executive headhunting</b>, <b>frontline recruitment</b>, or <b>bulk onboarding</b>,
-                    we ensure organizations get candidates who are professional, reliable, and aligned with business
-                    goals.
+                    <p>&#8226; Akshara Consulting Services brings the right combination of proficiency to help
+                        organizations acquire flexible and permanent workforces, enhancing operational efficiency.</p>
 
-                    <br><br>
+                    <p>&#8226; With a commitment to quality, the company aims to become one of the leading independent
+                        providers of HR resources for the IT, ITES and non-IT industries.</p>
 
-                    Beyond recruitment, we extend our services into <b>Real Estate Advisory</b>, helping clients with
-                    NA/AG property
-                    verification, land valuation, documentation guidance, and investment evaluation.
-                    Our <b>Insurance Support</b> wing assists clients with policy planning, renewals, and
-                    claims—ensuring a smooth
-                    experience without confusion.
+                    <p>&#8226; Akshara Consulting Services provides suitable candidates for employment at all levels
+                        across various functional areas to meet diverse industry needs. We maintain an updated database
+                        of high-quality professional profiles.</p>
 
-                    <br><br>
+                    <p>&#8226; We adopt a holistic, research-oriented approach to develop company-specific staffing
+                        solutions supported by a strong technological platform.</p>
 
-                    At Akshara Consultancy, we believe in <b>honesty, clear communication, and long-term
-                        relationships</b>.
-                    Every service we offer—whether hiring, property guidance, or insurance assistance—is built on trust,
-                    professionalism, and the promise to create real value for our clients.
-                </p>
+                    <p>&#8226; Our ability to work across diverse industry segments is a strength — our talent pool of
+                        business developers with varied expertise delivers comprehensive staffing solutions for entry
+                        level, junior, middle, and senior management positions.</p>
+
+                    <p>&#8226; Based on client requirements, Akshara Consulting Services conducts preliminary
+                        assessments to evaluate candidate suitability.</p>
+
+                    <p>&#8226; We act as an extension of your team and remain committed to delivering outstanding
+                        results from start to finish.</p>
+                </div>
+
             </div>
         </section>
 
@@ -502,6 +375,26 @@
         hamburger.addEventListener('keydown', (e) => { if (e.key === 'Enter') hamburger.click(); });
 
     </script>
+    <script>
+        function toggleTheme() {
+            const theme = document.getElementById("theme-style");
+            const desktopBtn = document.getElementById("themeToggle");
+            const mobileBtn = document.getElementById("themeToggleMobile");
+
+            // Toggle CSS file
+            if (theme.getAttribute("href") === "index.css") {
+                theme.setAttribute("href", "light.css");  // switch to light mode
+                desktopBtn.textContent = "☀️";           // change icon to sun
+                mobileBtn.textContent = "☀️";
+            } else {
+                theme.setAttribute("href", "index.css"); // switch back to dark mode
+                desktopBtn.textContent = "🌙";           // change icon to moon
+                mobileBtn.textContent = "🌙";
+            }
+        }
+    </script>
+
+
 
 
 </body>
